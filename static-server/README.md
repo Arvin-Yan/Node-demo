@@ -62,9 +62,10 @@ let extension = path.extname(pathName).replace('.', ''),
 res.setHeader('content-type', fileType);    
 ```
 5. 判断该文件是否可压缩可缓存
+```
 let compressible = extension.match(/css|html|js|json|md|txt/ig),
     cacheable = extension.match(/gif|png|jpg|css|js/ig);
-
+```
 6. 若文件支持缓存，则进行缓存处理。此处没有使用expires，而是用了max-age代替expires。并使用
 last-modified和if-modified-since进一步判断缓存是否过期。
 ```
