@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>123</title>
+        <style type="text/css">
+            .ct{
+                width: 900px;
+                margin: 10 auto;
+            }
+            .ct a{
+                display: block;
+                margin: 10px;
+                color:green;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ct">
+            <% for(var i=0; i<data.file.length; i++) { %>
+                <a href="<%= data.path%><%= data.file[i]%>"><%= data.file[i]%></a>
+            <% } %>
+        </div>
+    </body>
+</html>
